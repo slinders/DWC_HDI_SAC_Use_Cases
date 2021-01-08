@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="tc07_salesorder_cv" applyPrivilegeType="NONE" dataCategory="CUBE" schemaVersion="3.0" outputViewType="Aggregation" cacheInvalidationPeriod="NONE" enforceSqlExecution="false">
+<descriptions defaultDescription="tc07_salesorder_cv"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="SalesOrder">
+    <resourceUri>SalesOrder</resourceUri>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="SalesOrder">
+  <attributes>
+    <attribute id="SalesOrderID" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="SalesOrderID"/>
+      <keyMapping columnObjectName="SalesOrder" columnName="SalesOrderID"/>
+    </attribute>
+    <attribute id="OrderDate" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="OrderDate"/>
+      <keyMapping columnObjectName="SalesOrder" columnName="OrderDate"/>
+    </attribute>
+    <attribute id="CustomerName" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CustomerName"/>
+      <keyMapping columnObjectName="SalesOrder" columnName="CustomerName"/>
+    </attribute>
+    <attribute id="ProductName" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="ProductName"/>
+      <keyMapping columnObjectName="SalesOrder" columnName="ProductName"/>
+    </attribute>
+    <attribute id="Country" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Country"/>
+      <keyMapping columnObjectName="SalesOrder" columnName="Country"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures>
+    <measure id="OrderQuantity" order="5" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="OrderQuantity"/>
+      <measureMapping columnObjectName="SalesOrder" columnName="OrderQuantity"/>
+    </measure>
+    <measure id="Sales" order="6" aggregationType="sum" measureType="simple">
+      <descriptions defaultDescription="Sales"/>
+      <measureMapping columnObjectName="SalesOrder" columnName="Sales"/>
+    </measure>
+  </baseMeasures>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+  <localDimensions/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

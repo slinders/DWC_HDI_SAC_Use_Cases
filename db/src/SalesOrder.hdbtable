@@ -1,0 +1,10 @@
+COLUMN TABLE "SalesOrder" (
+	
+	"SalesOrderID" Integer,
+	"OrderDate" timestamp,
+	"CustomerName" nvarchar(100),
+	"ProductName" nvarchar(100),
+	"OrderQuantity" integer,
+	"Sales" decimal(15,2),
+	"Country" nvarchar(100)
+)
